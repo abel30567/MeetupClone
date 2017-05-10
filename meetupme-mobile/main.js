@@ -1,52 +1,19 @@
 import Expo from 'expo';
-import React from 'react';
-import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
-import { fetchMeetups } from './constants/api'
+import React, { Component } from 'react';
+import { View, Text } from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet';
+import Colors from './constants/Colors';
+import { HomeScreen } from './src/screens/home/HomeScreen';
 
-class App extends React.Component {
-  static defaultProps = {
-    fetchMeetups
-  }
+EStyleSheet.build(Colors);
 
-  state = {
-    loading: false,
-    meetups: []
-  }
-  
-  async componentDidMount() {
-    this.setState({ loading: true });
-    const data = await this.props.fetchMeetups();
-    setTimeout(() => this.setState({ loading: false, meetups: data.meetups }), 2000);
-  }
-  
+class App extends Component {
   render() {
-    if (this.state.loading) {
-      return (
-        <View style={styles.container}>
-          <ActivityIndicator size="large" />
-        </View>
-      )
-    }
-
     return (
-      <View style={styles.container}>
-        <Text>MeetupMe</Text>
 
-        {this.state.meetups.map((meetup,i) => (
-          <Text key={i}>{meetup.title}</Text>
-        ))}
-      </View>
+     <HomeScreen />
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 Expo.registerRootComponent(App);

@@ -6,8 +6,13 @@
   "private": true,
   "main": "main.js",
   "dependencies": {
+    "axios": "^0.16.1",
     "expo": "16.0.0",
     "react": "16.0.0-alpha.6",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-16.0.0.tar.gz"
+    "react-native": "https://github.com/expo/react-native/archive/sdk-16.0.0.tar.gz",
+    "react-native-extended-stylesheet": "^0.4.0"
+  },
+  "devDependencies": {
+    "eslint-config-equimper": "^1.6.3"
   }
 }

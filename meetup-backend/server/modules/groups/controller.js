@@ -86,4 +86,4 @@ export const getGroupMeetups = async (req, res) => {
   } catch (e) {
     return res.status(400).json({ error: true, message: 'Cannot fetch meetup' });
   }
-}
+};
