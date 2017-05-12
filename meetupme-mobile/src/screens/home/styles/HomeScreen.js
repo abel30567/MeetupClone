@@ -4,7 +4,7 @@ const styles = EStyleSheet.create({
   root: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: '#384259',
+    backgroundColor: `$blackBlueColor`,
   },
 });
 

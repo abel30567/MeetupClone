@@ -1,18 +1,14 @@
 import Expo from 'expo';
-import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import React from 'react';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import Colors from './constants/Colors';
-import { HomeScreen } from './src/screens/home/HomeScreen';
+import { HomeScreen } from './src/screens';
 
 EStyleSheet.build(Colors);
 
-class App extends Component {
+class App extends React.Component {
   render() {
-    return (
-
-     <HomeScreen />
-    );
+    return <HomeScreen />;
   }
 }
 

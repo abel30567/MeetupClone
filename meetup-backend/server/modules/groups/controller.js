@@ -81,7 +81,7 @@ export const getGroupMeetups = async (req, res) => {
   try {
     return res.status(200).json({
       error: false,
-      meetups: await Meetup.find({ group: groupId }).populate('group', 'name'),
+      meetups: await Meetup.find({ group: groupId }).populate('group', 'name')
     });
   } catch (e) {
     return res.status(400).json({ error: true, message: 'Cannot fetch meetup' });
