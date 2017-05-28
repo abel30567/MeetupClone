@@ -4,17 +4,7 @@ const styles = EStyleSheet.create({
   root: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: 'lightblue',
-  },
-  topContainer: {
-    flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
-
-  },
-  bottomContainer: {
-    flex: 0.8,
-
   },
 });
 
